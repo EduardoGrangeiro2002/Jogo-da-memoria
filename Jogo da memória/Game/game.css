@@ -1,0 +1,132 @@
+body{
+
+    font-family: 'Righteous', cursive;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c7cdd3;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card{
+   width: 150px;
+   height: 150px;
+   position: relative;
+   transform-style: preserve-3d;
+   transition: transform .5s;
+
+}
+
+
+.flip{
+  transform:rotateY(180deg)   
+  
+}
+
+.card_front{
+   background-color: #101c2c;
+   transform: rotateY(180deg);
+}
+
+.card_front, .card_back{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 10px;
+ box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+ backface-visibility: hidden;
+ 
+ 
+}
+#GameBoard{
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+
+.card_back{
+   background-color: #05c3ff;
+   font-size: 30px;
+   color: #101c2c;
+   
+}
+
+
+#GameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    flex-direction: column;
+    top: 0;
+}
+.Restart{
+   width: 300px;
+    padding: 20px;
+   font-size: 20px;
+   background-color: yellow;
+   border: none;
+   border-radius: 10px;
+   margin-top: 10px;
+   transition-property: padding;
+   transition-duration: 200ms;
+
+
+}
+.Restart:hover{
+    cursor: pointer;
+    padding: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+#caixa{
+    font-size: 22px;
+    
+}
+
+
+@media (max-width: 1200px){
+
+    .card{
+        width: 20vw;
+        height: 20vw;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform .5s;
+     
+     }
+     img{
+        width: 60px;
+
+
+     }
+
+
+
+}
